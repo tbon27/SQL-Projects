@@ -3,6 +3,11 @@
 -- = ANIMALIA KINGDOM TABLE EXAMPLE =
 -- ==================================
 
+USE db_zoo;
+
+IF Exists (SELECT 1 FROM INFORMATION_SCHEMA.TABLES tbl_species)
+	DROP TABLE tbl_species, tbl_animalia, tbl_care, tbl_class, tbl_habitat, tbl_nutrition, tbl_order, tbl_specialist;
+
 -- create new table called tbl_animalia
 --- add primary key animalia_id to tbl_animalia (starting at 1, increment +1); not null
 ---- add animalia_type to tbl_animalia with max 50 varchar; not null
