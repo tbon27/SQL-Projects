@@ -6,10 +6,10 @@
 -- Removed after database was created (executed this once)
 CREATE DATABASE db_zooTest1
 GO*/
-/*
+
 -- removed after ran once, targets our desired db
 USE db_zooTest1
-*/
+
 
 CREATE PROCEDURE createZooDB
 AS
@@ -202,6 +202,8 @@ BEGIN
 			('grey wolf', 1, 102, 1, 5000, 2201, 'care_4')
 	;
 	SELECT * FROM tbl_species;
+	SELECT * FROM tbl_specialist;
+	SELECT * FROM tbl_care;
 
 	-- ======================================
 	-- = Queries database using INNER JOINS =
